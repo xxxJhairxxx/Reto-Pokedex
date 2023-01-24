@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.Pokedex {
+    width: 308px;
+    height: 462px;
+    margin: 20% 0;
+    border-radius: 27px;
+    overflow: hidden;
+    position: relative;
+}
+
+.Pokedex__Pokedeximg{
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+.circle{
+    display: block;
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 1;
+    left: 31px;
+    top:11px;
+    animation: intermitente 1.5s infinite;
+}
+
+@keyframes intermitente {
+    0%{
+        background-color: red;
+    }
+
+    50%{
+        background-color: rgba(255, 0, 0, 0);
+    }
+    100%{
+        background-color: red;
+    }
+}
+
+.display {
+    position: absolute;
+    width: 255px;
+    height: 247px;
+    left:22px;
+    top:78px;
+    border: solid black 3px;
+}
+
+.display__pokemonImg{
+    padding: 10%;
+    width: 80%;
+}
+
+.nombre{
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    background-color: #8EC840;
+    width: 250px;
+    left:25px;
+    bottom:98px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 15px;
+    padding-left: 10PX;
+}
+
+.nombre:focus{
+    border: none;
+}
+
+.subdisplay {
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    border: rgb(48, 48, 48) solid 2px;
+    background-color: #8EC840;
+    width: 127px;
+    height: 53px;
+    left: 90px;
+    padding: 5px;
+    bottom:20px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    overflow-y: scroll;
+}
+.subdisplay::-webkit-scrollbar{
+    display: none;
+}
+.subdisplay p{
+    width: 117px;
+}
