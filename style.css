@@ -55,6 +55,7 @@ body{
     left:22px;
     top:78px;
     border: solid black 3px;
+    overflow: hidden;
 }
 
 .display__pokemonImg{
