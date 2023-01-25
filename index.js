@@ -2,6 +2,7 @@ const pokeimg= document.getElementById('pokeimg');
 const pokename= document.getElementById('pokename');
 const display = document.getElementById('display');
 const subdisplay= document.getElementById('subdisplay');
+const btncheck = document.querySelector('.btn_check');
 
 const obtenerPokemones = async (name) => {
     const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=200");
@@ -47,8 +48,21 @@ const obtenerPokemones = async (name) => {
       if(localStorage.getItem('PokeList')){
         const data = JSON.parse(localStorage.getItem('PokeList'));
         setPokemonsInView(data,this.value);
+      }else{
+        obtenerPokemones(this.value);
       }
-      obtenerPokemones(this.value);
+      
     }
   });
   
+  btncheck.addEventListener('click', () => {
+    if(localStorage.getItem('PokeList')){
+      const data = JSON.parse(localStorage.getItem('PokeList'));
+      setPokemonsInView(data,pokename.value);
+    }else{
+      obtenerPokemones(pokename.value);
+    }
+  });
+    
+  
+ 

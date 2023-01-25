@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 *{
     margin: 0;
     padding: 0;
@@ -102,4 +102,24 @@ body{
 }
 .subdisplay p{
     width: 117px;
+}
+.btn_check{
+    background-color: #42B652;
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000 ;
+    bottom: 28px;
+    right:21px;
+}
+.btn_check:hover{
+    cursor: pointer;
+    background-color: #42d556;
+
+}
+
+.bi{
+    font-weight: bold;
+    font-size: 25px;
 }
